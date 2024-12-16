@@ -27,5 +27,3 @@ average_logs_df.show()
 
 log_message_summary_df = logs_past_week_df.groupBy("log_level", "message").count()
 log_message_summary_df.orderBy(col("count").desc()).show()
-
-spark.stop()
